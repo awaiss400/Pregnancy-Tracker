@@ -41,8 +41,8 @@ fun SplashScreen(viewModel: SplashViewModel = hiltViewModel()) {
         navController.navigate(Routes.Premium.route)
     }
     Box(modifier = Modifier.fillMaxSize()){
-        Column(verticalArrangement = Arrangement.Center, modifier = Modifier.fillMaxSize()) {
-            Text(text = "Premium")
+        Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxSize()) {
+            Text(text = "Splash")
         }
     }
 }
