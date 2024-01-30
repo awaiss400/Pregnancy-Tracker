@@ -40,11 +40,11 @@ fun SplashScreen(viewModel: SplashViewModel = hiltViewModel()) {
     LaunchedEffect(key1 = state) { // Relaunch on state change
         navController.navigate(Routes.Premium.route)
     }
-
+    Box(modifier = Modifier.fillMaxSize()){
+        Column(verticalArrangement = Arrangement.Center, modifier = Modifier.fillMaxSize()) {
+            Text(text = "Premium")
+        }
+    }
 }
 
-@Preview(showBackground = false)
-@Composable
-fun splash() {
-    SplashScreen()
-}
+

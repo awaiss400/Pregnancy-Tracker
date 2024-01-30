@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun PremiumScreen() {
     Box(modifier = Modifier.fillMaxSize()){
-        Column(verticalArrangement = Arrangement.Center) {
+        Column(verticalArrangement = Arrangement.Center, modifier = Modifier.fillMaxSize()) {
             Text(text = "Premium")
         }
     }
