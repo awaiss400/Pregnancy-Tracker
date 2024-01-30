@@ -37,8 +37,10 @@ fun SplashScreen(viewModel: SplashViewModel = hiltViewModel()) {
     }
     val navController = LocalNavController.current
 
-    LaunchedEffect(key1 = state) { // Relaunch on state change
-        navController.navigate(Routes.Premium.route)
+    LaunchedEffect(key1 = state) {
+        if (state){
+            navController.navigate(Routes.Premium.route)
+        }
     }
     Box(modifier = Modifier.fillMaxSize()){
         Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxSize()) {
@@ -46,5 +48,6 @@ fun SplashScreen(viewModel: SplashViewModel = hiltViewModel()) {
         }
     }
 }
+
 
 
